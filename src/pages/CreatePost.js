@@ -11,7 +11,7 @@ const CreatePost = () => {
 
     const nav=useNavigate();
 
-    const {posts, setPosts, currentUser}=useContext(MainContext);
+    const {posts, setPosts, currentUser, setLocation}=useContext(MainContext);
 
     const createPost=()=>{
         setPosts([...posts, {
@@ -20,15 +20,16 @@ const CreatePost = () => {
             creator: currentUser
         }]);
         nav('/main');
+        setLocation('/main');
     }
 
     return (
         <div>
-            <h2>create post PAGE</h2>
+            <h2>create post </h2>
             <div className={'flex-col'}>
                 <input type="text" ref={title} placeholder={'Title'}/>
                 <input type="text" ref={text} placeholder={'text'}/>
-                <button type="submit" onClick={()=>{createPost()}}>Login</button>
+                <button type="submit" onClick={()=>{createPost()}}>Create</button>
             </div>
 
         </div>

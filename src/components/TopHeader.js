@@ -15,6 +15,8 @@ const TopHeader = () => {
             {(location==='/create-post') && <Link to='main' onClick={()=>{setLocation('/main')}}>Show posts</Link>}
 
             {(location==='/main' || location==='/create-post') && <p>User: {currentUser}</p>}
+
+
         </div>
     );
 };

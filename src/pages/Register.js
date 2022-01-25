@@ -1,5 +1,6 @@
 import React, {useContext, useRef} from 'react';
 import MainContext from "../context/MainContext";
+import {useNavigate} from "react-router-dom";
 
 const Register = () => {
 
@@ -7,7 +8,9 @@ const Register = () => {
     const usrPass1=useRef();
     const usrPass2=useRef();
 
-    const {users, setUsers}=useContext(MainContext);
+    const nav=useNavigate();
+
+    const {users, setUsers, setLocation}=useContext(MainContext);
 
     const addUser = () => {
         console.log('vardas', usrName.current.value);
@@ -17,12 +20,14 @@ const Register = () => {
 
         console.log('Useris', usrName.current.value, 'pridetas. pass: ', usrPass1.current.value);
         setUsers([...users,{name:usrName.current.value, pass: usrPass1.current.value}]);
+        nav('/login');
+        setLocation('login');
     }
 
 
     return (
         <div>
-            <h2>register PAGE</h2>
+            <h2>register new user</h2>
             <div className={'flex-col'}>
                 <input type="text" ref={usrName} placeholder={'Name'}/>
                 <input type="password" ref={usrPass1} placeholder={'password'}/>

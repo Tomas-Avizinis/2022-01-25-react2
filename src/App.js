@@ -16,9 +16,9 @@ import MainShowPosts from "./pages/MainShowPosts";
 function App() {
 
     const [location, setLocation]=useState('/');
-    const [users, setUsers]=useState([{name:'Rytis', pass: 'tevas'}]);
+    const [users, setUsers]=useState([]);
     const [currentUser, setCurrentUser]=useState();
-    const [posts, setPosts]=useState([{title:'Pirmas ', text: 'iraso turinys', creator:'Tomas'}])
+    const [posts, setPosts]=useState([]);
 
 
   return (
