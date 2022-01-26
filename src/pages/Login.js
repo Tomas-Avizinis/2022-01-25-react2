@@ -25,8 +25,8 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <h2>login PAGE</h2>
+        <div className={'input-box'}>
+            <h2>Please log in</h2>
             <div className={'flex-col'}>
                 <input type="text" ref={usrName} placeholder={'Name'}/>
                 <input type="password" ref={usrPass} placeholder={'password'}/>

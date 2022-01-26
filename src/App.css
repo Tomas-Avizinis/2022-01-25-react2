@@ -1,28 +1,101 @@
 .App {
   text-align: center;
+  /*width: 100%;*/
+}
+.flex-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: center;*/
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 80px;
+  /*background-image: url("https://c4.wallpaperflare.com/wallpaper/649/200/63/digital-art-artwork-abstract-wallpaper-preview.jpg");*/
+  /*background-image: url('https://c4.wallpaperflare.com/wallpaper/296/495/771/abstract-digital-art-lines-shapes-wallpaper-preview.jpg');*/
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/114/25/77/artwork-illustration-mountains-sky-wallpaper-preview.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
 }
 
+
 .top-header {
-  padding: 10px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 10px 50px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 25px;
   height: 50px;
   background-color: cornflowerblue;
+  opacity:.8;
+  z-index: 5;
+}
+.top-header a, button {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding:  8px 20px;
+  margin: 10px;
+  background-color: cornflowerblue;
+  border: 1px outset white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.header-flex {
+  display: flex;
+  gap:20px;
+  align-items: center;
+}
+.input-box {
+  display: flex;
+  flex-direction: column;
+  /*max-width: 400px;*/
+  margin: 25px;
+  padding: 25px 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.5);
+}
+input {
+  border: 1px inset;
+  padding: 5px;
+  background-color: cornflowerblue;
+  font-weight: 600;
+  font-size: 1em;
+}
+input::placeholder {
+  color: #05ffbf;
+  font-weight: 100;
 }
 
 .user-card, .post-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 300px;
-  margin: 10px;
-  padding: 5px;
+  align-items: start;
+  width: 160px;
   background-color: darkgrey;
   flex-wrap: wrap;
-  border: 1px outset black;
+  margin: 5px;
+  padding: 25px 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.5);
+}
+
+p{
+  margin: 4px 0;
+  /*padding: 0;*/
 }
 .flex {
   display: flex;

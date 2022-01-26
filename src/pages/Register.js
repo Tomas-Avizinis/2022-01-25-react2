@@ -13,7 +13,7 @@ const Register = () => {
     const {users, setUsers, setLocation}=useContext(MainContext);
 
     const addUser = () => {
-        console.log('vardas', usrName.current.value);
+
         if (usrName.current.value<3 || usrName.current.value>10) return
         if (usrPass1.current.value<3 || usrPass1.current.value>10) return
         if (usrPass1.current.value !== usrPass2.current.value) return;
@@ -24,10 +24,9 @@ const Register = () => {
         setLocation('login');
     }
 
-
     return (
-        <div>
-            <h2>register new user</h2>
+        <div className={'input-box'}>
+            <h2>Register New User</h2>
             <div className={'flex-col'}>
                 <input type="text" ref={usrName} placeholder={'Name'}/>
                 <input type="password" ref={usrPass1} placeholder={'password'}/>
@@ -39,6 +38,3 @@ const Register = () => {
 };
 
 export default Register;
-
-
-// <input type="text" ref={usrName} placeholder={'Name'} onChange={instantCheck}  />

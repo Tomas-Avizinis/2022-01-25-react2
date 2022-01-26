@@ -11,7 +11,10 @@ const MainShowPosts = () => {
 
         <div>
             <h2>show posts PAGE</h2>
-            {posts.map((p,i) => <PostCard key={i} post={p}/> )}
+            <div className={'flex'}>
+                {posts.map((p,i) => <PostCard key={i} post={p}/> )}
+            </div>
+
         </div>
     );
 };
