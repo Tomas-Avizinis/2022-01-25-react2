@@ -20,7 +20,8 @@ const CreatePost = () => {
             text: text.current.value,
             creator: currentUser,
             id: id+1,
-            liked:[]
+            liked:[],
+            comments:[]
         }]);
         nav('/main');
         setLocation('/main');

@@ -43,13 +43,17 @@
   color: white;
   font-weight: 600;
   padding:  8px 20px;
-  margin: 10px;
+  margin: 10px 0;
   background-color: cornflowerblue;
   border: 1px outset white;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
 }
+.post-btn {
+  background-color: #9b9b9b;
+}
+
 .header-flex {
   display: flex;
   gap:20px;
@@ -77,26 +81,53 @@ input::placeholder {
   color: #05ffbf;
   font-weight: 100;
 }
+.show-posts {
+  position: fixed;
+  padding: 100px 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: left;
+  align-items: stretch;
+  overflow: auto;
+  /*height: 88vh;*/
+  margin-bottom: 10px;
+}
+
 
 .user-card, .post-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 160px;
+  /*justify-content: center;*/
+  align-items: stretch;
+  width: 250px;
   background-color: darkgrey;
   flex-wrap: wrap;
   margin: 5px;
-  padding: 25px 50px;
+  padding: 25px 50px 0;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.5);
+  text-align: left;
+}
+h3 {
+  margin: 0;
 }
 
 p{
   margin: 4px 0;
   /*padding: 0;*/
 }
+.post-text {
+  border-bottom: 1px dotted black;
+  padding-bottom: 5px;
+}
+
+.author {
+  border-top: .5px dotted black;
+  margin-bottom: 10px;
+}
+
 .flex {
   display: flex;
   gap: 10px;
@@ -104,6 +135,7 @@ p{
   justify-content: center;
   align-items: center;
 }
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -112,3 +144,29 @@ p{
   justify-content: center;
   align-items: center;
 }
+.sp-between {
+  justify-content: space-between;
+}
+
+.modal {
+  position: relative;
+  width: 300px;
+  z-index: 5;
+  padding: 20px 50px;
+}
+.close-btn {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  padding: 5px;
+}
+.comment {
+  font-size: .8em;
+  /*border-top: 1px dotted black;*/
+  background-color: #9b9b9b;
+  margin: 2px;
+  padding: 2px;
+}
+
